@@ -1,0 +1,12 @@
+ public static void main(String[] args) throws IOException {
+     BufferedReader bfr = new BufferedReader(new FileReader("f:/file/numtest.txt"));
+     String line=null;
+     for(int i=1;i<5;i++)
+       {
+           line = bfr.readLine();
+           BufferedWriter bfw = new BufferedWriter(new FileWriter("f:/file/test"+i+"_input.txt"));
+           bfw.write(line);
+           bfw.flush();
+           bfw.close();
+       }
+       bfr.close();
