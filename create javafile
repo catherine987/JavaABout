@@ -1,0 +1,18 @@
+
+import java.io.*;
+
+public class wenjian {
+    public static void main(String[] args) throws IOException {
+        for (int i = 1; i <= 10; i++) {
+            File file = null;
+            try {
+                file = new File("f:/file/"+i+".txt");
+                if(!file.exists())
+                    file.createNewFile();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
+}
